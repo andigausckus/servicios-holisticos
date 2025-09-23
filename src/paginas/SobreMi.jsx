@@ -15,11 +15,11 @@ export default function SobreMi() {
     <div className="p-8 text-center">
       <h1 className="text-3xl font-bold text-teal-600 mb-4">Sobre mí</h1>
       <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-        Bienvenido/a 👋 Soy Andi Gausckus, el creador de este espacio de servicios holísticos.
+        Bienvenido/a 👋 Soy Andi Gausckus, el creador de este espacio de servicios holisticos.
       </p>
 
       <p className="text-gray-700 max-w-2xl mx-auto mb-6">
-        Mi objetivo es ayudarte a conectar con terapeutas de confianza de manera simple y accesible.
+        Mi objetivo es ayudarte a conectar con terapeutas de confianza de manera simple y accesible, para que puedas encontrar el apoyo que necesitas.
       </p>
 
       <p className="text-gray-700 max-w-2xl mx-auto mb-6">
