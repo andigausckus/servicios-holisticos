@@ -41,4 +41,18 @@
     "especialidades": ["Masajes terapéuticos", "Masajes relajantes"],
     "disponibilidad": "Lunes a Sábado de 9 a 13hs"
   }
+  {
+    "id": 4,
+    "nombre": "Juana Losa",
+    "slug": "juana-losa",
+    "provincia": "Buenos Aires",
+    "ciudad": "Pergamino",
+    "lat": -32.9587,
+    "lng": -60.6939,
+    "fotoPerfil": "https://i.postimg.cc/JzBBwGby/man-613601-640.jpg",
+    "fotoPortada": "https://i.postimg.cc/JhF6rT0r/yoga-4489430-1920.jpg",
+    "sobreMi": "Soy Sofía, terapeuta especializada en Reiki y terapias energéticas. Mi misión es ayudarte a equilibrar tu energía y encontrar paz interior.",
+    "especialidades": ["Reiki", "Terapias energéticas"],
+    "disponibilidad": "Lunes a Viernes de 10 a 15hs"
+  }
 ]
