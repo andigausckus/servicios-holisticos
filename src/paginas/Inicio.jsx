@@ -1,8 +1,33 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function Inicio() {
   return (
     <div className="w-full font-montserrat">
+      {/* SEO dinámico */}
+      <Helmet>
+        <title>Servicios Holísticos | Encuentra terapeutas de confianza</title>
+        <meta
+          name="description"
+          content="Conecta con terapeutas certificados y reserva sesiones de Reiki, Yoga, Tarot y más. Online o presencial."
+        />
+        <meta property="og:title" content="Servicios Holísticos" />
+        <meta
+          property="og:description"
+          content="Descubre terapeutas y reserva tu sesión fácilmente. Reiki, Yoga, Tarot y más."
+        />
+        <meta
+          property="og:image"
+          content="https://www.serviciosholisticos.com.ar/android-chrome-512x512.png"
+        />
+        <meta
+          property="og:url"
+          content="https://www.serviciosholisticos.com.ar/"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="es_AR" />
+      </Helmet>
+
       {/* Hero */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-amber-100 via-amber-200 to-yellow-100 text-center px-6">
         <div className="max-w-4xl">

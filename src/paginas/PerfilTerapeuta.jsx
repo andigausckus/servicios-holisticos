@@ -1,6 +1,6 @@
-// PerfilTerapeuta.jsx
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import terapeutas from "../datos/terapeutas.json";
 import servicios from "../datos/servicios.json";
 import slugify from "../utils/slugify";
@@ -28,6 +28,29 @@ export default function PerfilTerapeuta() {
 
   return (
     <div className="p-5 max-w-full mx-auto">
+      {/* SEO dinámico */}
+      <Helmet>
+        <title>{`${terapeuta.nombre} | Terapeuta Holístico en ${terapeuta.ciudad}`}</title>
+        <meta
+          name="description"
+          content={`${terapeuta.nombre} ofrece ${terapeuta.especialidades?.join(
+            ", "
+          )}. ${terapeuta.sobreMi}`}
+        />
+        <meta property="og:title" content={`${terapeuta.nombre} | Servicios Holísticos`} />
+        <meta
+          property="og:description"
+          content={`${terapeuta.especialidades?.join(", ")} en ${terapeuta.ciudad}, ${terapeuta.provincia}.`}
+        />
+        <meta property="og:image" content={terapeuta.fotoPerfil} />
+        <meta
+          property="og:url"
+          content={`https://www.serviciosholisticos.com.ar/terapeuta/${terapeuta.slug}`}
+        />
+        <meta property="og:type" content="profile" />
+        <meta property="og:locale" content="es_AR" />
+      </Helmet>
+
       {/* Foto de portada */}
       <div className="w-full h-60 bg-gray-200 rounded-lg overflow-hidden mb-6">
         <img

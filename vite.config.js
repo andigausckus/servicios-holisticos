@@ -11,7 +11,7 @@ export default defineConfig({
       '127.0.0.1',
       '0.0.0.0',
       // 👇 nueva URL de Replit
-      '127dd2c7-90b7-41e4-855d-5ad815ec78b4-00-1bsvcil80nf76.janeway.replit.dev'
+      'e6689033-981b-43f3-a6c9-7e71c974b81c-00-241su2yzpfeda.janeway.replit.dev'
     ]
   }
 })
