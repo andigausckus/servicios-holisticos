@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sofia Martinez",
+    "slug": "sofia-martinez",
+    "provincia": "Santa Fe",
+    "ciudad": "Rosario",
+    "lat": -32.9587,
+    "lng": -60.6939,
+    "fotoPerfil": "https://i.postimg.cc/JzBBwGby/man-613601-640.jpg",
+    "fotoPortada": "https://i.postimg.cc/JhF6rT0r/yoga-4489430-1920.jpg",
+    "sobreMi": "Soy Sofía, terapeuta especializada en Reiki y terapias energéticas. Mi misión es ayudarte a equilibrar tu energía y encontrar paz interior.",
+    "especialidades": ["Reiki", "Terapias energéticas"],
+    "disponibilidad": "Lunes a Viernes de 10 a 15hs"
+  },
+  {
+    "id": 2,
+    "nombre": "Juan Perez",
+    "slug": "juan-perez",
+    "provincia": "Cordoba",
+    "ciudad": "Cordoba",
+    "lat": -31.4201,
+    "lng": -64.1888,
+    "fotoPerfil": "https://via.placeholder.com/150",
+    "fotoPortada": "https://via.placeholder.com/800x300",
+    "sobreMi": "Soy Juan, me dedico a la meditación guiada y mindfulness. Mi objetivo es ayudarte a vivir con mayor claridad y calma.",
+    "especialidades": ["Meditación guiada", "Mindfulness"],
+    "disponibilidad": "Martes y Jueves de 14 a 20hs"
+  },
+  {
+    "id": 3,
+    "nombre": "Maria Lopez",
+    "slug": "maria-lopez",
+    "provincia": "Buenos Aires",
+    "ciudad": "Buenos Aires",
+    "lat": -34.6037,
+    "lng": -58.3816,
+    "fotoPerfil": "https://i.postimg.cc/GpMG9RNG/woman-2604283-640.jpg",
+    "fotoPortada": "https://via.placeholder.com/800x300",
+    "sobreMi": "Soy María, ofrezco masajes terapéuticos y relajantes. Mi enfoque está en el bienestar físico y emocional.",
+    "especialidades": ["Masajes terapéuticos", "Masajes relajantes"],
+    "disponibilidad": "Lunes a Sábado de 9 a 13hs"
+  }
+]

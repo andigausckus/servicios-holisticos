@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "titulo": "Sesión de Yoga Energético",
+    "terapeutaSlug": "sofia-martinez",
+    "categoria": "Reiki",
+    "modalidad": "Presencial",
+    "precio": 2000,
+    "imagen": "https://i.postimg.cc/Sx2ydx5D/yoga-2587066-1280.jpg",
+    "duracion": "60 minutos",
+    "descripcion": "Una sesión de Reiki energético diseñada para equilibrar la energía vital y promover el bienestar físico y emocional."
+  },
+  {
+    "id": 2,
+    "titulo": "Terapia de Flores de Bach",
+    "terapeutaSlug": "juan-perez",
+    "categoria": "Flores de Bach",
+    "modalidad": "Online",
+    "precio": 2500,
+    "imagen": "https://i.postimg.cc/gJRqS8Zc/bach-flowers-1472825-1280.jpg",
+    "duracion": "45 minutos",
+    "descripcion": "Tratamiento con flores de Bach para ayudar a equilibrar emociones y mejorar tu bienestar diario."
+  },
+  {
+    "id": 3,
+    "titulo": "Constelaciones Familiares",
+    "terapeutaSlug": "maria-lopez",
+    "categoria": "Constelaciones Familiares",
+    "modalidad": "Presencial",
+    "precio": 3000,
+    "imagen": "https://i.postimg.cc/example3.jpg",
+    "duracion": "90 minutos",
+    "descripcion": "Sesión de constelaciones familiares para identificar y liberar patrones emocionales heredados."
+  }
+]

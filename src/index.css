@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Importar Leaflet primero */
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ajustes globales */
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  @apply font-sans; /* 👈 usa la fuente definida en tailwind.config.js */
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff; /* fondo blanco por defecto */
+  color: #213547; /* texto oscuro */
+}
