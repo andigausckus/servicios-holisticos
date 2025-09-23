@@ -2,43 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://servicios-holisticos.com/</loc>
+    <loc>https://serviciosholisticos.com.ar/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/contacto</loc>
+    <loc>https://serviciosholisticos.com.ar/contacto</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/servicios</loc>
+    <loc>https://serviciosholisticos.com.ar/servicios</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/sobre-mi</loc>
+    <loc>https://serviciosholisticos.com.ar/sobre-mi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/mapa</loc>
+    <loc>https://serviciosholisticos.com.ar/mapa</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Perfiles de terapeutas -->
   <url>
-    <loc>https://servicios-holisticos.com/terapeuta/sofia-martinez</loc>
+    <loc>https://serviciosholisticos.com.ar/terapeuta/sofia-martinez</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/terapeuta/juan-perez</loc>
+    <loc>https://serviciosholisticos.com.ar/terapeuta/juan-perez</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
   <url>
-    <loc>https://servicios-holisticos.com/terapeuta/maria-lopez</loc>
+    <loc>https://serviciosholisticos.com.ar/terapeuta/maria-lopez</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+
 </urlset>

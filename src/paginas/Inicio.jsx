@@ -1,7 +1,33 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useState } from "react";
 
 export default function Inicio() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      q: "¿Necesito registrarme para usar la plataforma?",
+      a: "No, no es necesario registrarse. Podés acceder a todos los servicios directamente.",
+    },
+    {
+      q: "¿Cómo se abona la sesión?",
+      a: "La sesión se abona por WhatsApp al reservar, de forma rápida y segura.",
+    },
+    {
+      q: "¿Cuándo recibo los datos del terapeuta?",
+      a: "Una vez realizado el pago, recibirás los datos completos del terapeuta.",
+    },
+    {
+      q: "¿Qué métodos de pago se aceptan?",
+      a: "Podés pagar con dinero en cuenta de Mercado Pago, transferencia CBU/CVU o con tarjeta de débito.",
+    },
+    {
+      q: "¿Dónde veo la disponibilidad y detalles del servicio?",
+      a: "La disponibilidad horaria, duración, ubicación y descripción se encuentran en los detalles de cada servicio.",
+    },
+  ];
+
   return (
     <div className="w-full font-montserrat">
       {/* SEO dinámico */}
@@ -31,23 +57,16 @@ export default function Inicio() {
       {/* Hero */}
       <section className="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-amber-100 via-amber-200 to-yellow-100 text-center px-6">
         <div className="max-w-4xl">
-          {/* H1 principal */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-4">
             Encuentra el terapeuta ideal para tu bienestar
           </h1>
-
-          {/* Descripción */}
           <p className="text-base md:text-lg text-gray-600 mb-8">
             Conecta con terapeutas de confianza, descubre servicios holísticos y
             reserva tu sesión fácilmente.
           </p>
-
-          {/* Subtítulo */}
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800 mb-6">
             ¿Qué tipo de terapia buscas?
           </h2>
-
-          {/* Botones en línea */}
           <div className="flex gap-6 justify-center">
             <Link
               to="/servicios?modalidad=online"
@@ -137,8 +156,34 @@ export default function Inicio() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gradient-to-r from-slate-50 via-slate-100 to-slate-200">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+          Preguntas frecuentes
+        </h2>
+        <div className="max-w-3xl mx-auto space-y-4">
+          {faqs.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white shadow rounded-lg p-4 cursor-pointer"
+              onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+            >
+              <div className="flex justify-between items-center">
+                <h3 className="text-lg font-medium text-gray-800">{item.q}</h3>
+                <span className="text-2xl text-teal-600">
+                  {openIndex === idx ? "−" : "+"}
+                </span>
+              </div>
+              {openIndex === idx && (
+                <p className="mt-3 text-gray-600">{item.a}</p>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* CTA final */}
-      <section className="py-20 bg-gradient-to-r from-stone-100 via-gray-200 to-zinc-200 text-center">
+      <section className="py-20 bg-gradient-to-r from-orange-100 via-amber-100 to-red-100  text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
           ¿Listo para comenzar tu camino de bienestar?
         </h2>
