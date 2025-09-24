@@ -24,6 +24,58 @@
     "duracion": "1 hora",
     "descripcion": "Una sesión de Reiki energético diseñada para equilibrar la energía vital y promover el bienestar físico y emocional..Una sesión de Reiki energético diseñada para equilibrar la energía vital y promover el bienestar físico y emocional.",
     "esNuevo": true
+  },
+  {
+  "id": "3",
+  "titulo": "Sesion de Registros Akáshicos",
+  "terapeutaSlug": "martin-quiroga",
+  "slug": "sesion-de-registros-akashicos",
+  "categoria": "Registros Akashicos",
+  "modalidad": "Online",
+  "precio": "9500",
+  "imagen": "https://i.postimg.cc/nVDk6Nv4/starry-sky-2533021-1280.jpg",
+  "duracion": "45 minutos",
+  "descripcion": "Sesión online de Registros Akáshicos, un espacio de conexión con tu esencia para recibir guía, claridad y comprensión sobre tu presente. A través de esta lectura, podrás explorar respuestas profundas, liberar bloqueos y abrirte a nuevas posibilidades en tu camino personal y espiritual.",
+  "esNuevo": true
+  },
+  {
+    "id": "",
+    "titulo": "",
+    "terapeutaSlug": "",
+    "slug": "",
+    "categoria": "",
+    "modalidad": "",
+    "precio": "",
+    "imagen": "",
+    "duracion": "",
+    "descripcion": "",
+    "esNuevo": true
+  },
+  {
+    "id": "",
+    "titulo": "",
+    "terapeutaSlug": "",
+    "slug": "",
+    "categoria": "",
+    "modalidad": "",
+    "precio": "",
+    "imagen": "",
+    "duracion": "",
+    "descripcion": "",
+    "esNuevo": true
+  },
+  {
+    "id": "",
+    "titulo": "",
+    "terapeutaSlug": "",
+    "slug": "",
+    "categoria": "",
+    "modalidad": "",
+    "precio": "",
+    "imagen": "",
+    "duracion": "",
+    "descripcion": "",
+    "esNuevo": true
   }
 
   

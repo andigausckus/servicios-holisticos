@@ -12,6 +12,7 @@ import Contacto from "./paginas/Contacto"; // 👈 nuevo import
 import BotonWhatsapp from "./componentes/BotonWhatsapp";
 import Footer from "./componentes/Footer";
 import ScrollToTop from "./componentes/ScrollToTop"; // 👈 nuevo import
+import RegistroTerapeuta from "./paginas/RegistroTerapeuta";
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
             <Route path="/terapeuta/:slug" element={<PerfilTerapeuta />} />
             <Route path="/mapa" element={<Mapa />} />
             <Route path="/contacto" element={<Contacto />} /> {/* 👈 nueva ruta */}
+            <Route path="/registro-terapeuta" element={<RegistroTerapeuta />} />
           </Routes>
         </main>
 

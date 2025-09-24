@@ -186,8 +186,11 @@ ${
         </div>
 
         {/* Texto de pago */}
-        <p className="text-sm italic text-gray-500 mt-8">
+        <p className="text-sm italic text-gray-500 mt-8 mb-4">
           Servicios Holisticos gestionará el pago de esta sesión.
+        </p>
+        <p className="text-sm text-gray-500">
+          Podés abonar esta sesión con dinero en cuenta de Mercado Pago o transferencia CBU/CVU.
         </p>
 
         {/* Precio y botón WhatsApp */}
