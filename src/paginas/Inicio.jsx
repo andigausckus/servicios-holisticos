@@ -23,14 +23,14 @@ export default function Inicio() {
   const presencialServicios = nuevosServicios.filter(s => s.modalidad === "Presencial");
 
   const settings = {
-    dots: true,             // muestra los puntos de navegación
-    infinite: true,         // hace que el slider sea infinito
-    speed: 500,             // velocidad de transición en ms
-    slidesToShow: 1,        // 1 tarjeta por vista
-    slidesToScroll: 1,      // avanza 1 tarjeta cada vez
-    autoplay: true,         // activa el autoplay
-    autoplaySpeed: 5000,    // tiempo entre slides en ms (5s)
-    arrows: true,           // flechas para navegar manual
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -67,15 +67,15 @@ export default function Inicio() {
   ];
 
   return (
-    <div className="w-full font-montserrat mb-24">
+    <div className="w-full font-montserrat mb-24 overflow-x-hidden">
       {/* SEO dinámico */}
       <Helmet>
-        <title>Servicios Holísticos | Encuentra terapeutas de confianza</title>
+        <title>Servicios Holisticos | Encuentra terapeutas de confianza</title>
         <meta
           name="description"
-          content="Conecta con terapeutas certificados y reserva sesiones de Reiki, Yoga, Tarot y más. Online o presencial."
+          content="Conecta con terapeutas y reserva sesiones de Reiki, Yoga, Tarot y más. Online o presencial."
         />
-        <meta property="og:title" content="Servicios Holísticos" />
+        <meta property="og:title" content="Servicios Holisticos" />
         <meta
           property="og:description"
           content="Descubre terapeutas y reserva tu sesión fácilmente. Reiki, Yoga, Tarot y más."
@@ -128,7 +128,7 @@ export default function Inicio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
             Servicios online
           </h2>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto overflow-hidden">
             <Slider {...settings}>
               {onlineServicios.map(s => (
                 <div key={s.id} className="p-4 flex flex-col items-center text-center">
@@ -163,7 +163,7 @@ export default function Inicio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
             Servicios presenciales
           </h2>
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto overflow-hidden">
             <Slider {...settings}>
               {presencialServicios.map(s => {
                 const terapeuta = terapeutas.find(t => t.slug === s.terapeutaSlug);
@@ -312,6 +312,8 @@ export default function Inicio() {
           Comenzar ahora
         </Link>
       </section>
+
+      
     </div>
   );
 }

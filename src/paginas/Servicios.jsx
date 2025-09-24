@@ -44,10 +44,10 @@ export default function Servicios() {
       </Helmet>
 
       <div className="p-3 pt-12 mb-24 max-w-6xl mx-auto">
-        <h1 className="text-3xl font-bold mb-2 text-teal-600">
+        <h1 className="text-3xl text-center font-bold mb-2 text-teal-600">
           Servicios disponibles
         </h1>
-        <p className="text-gray-600 mb-10">
+        <p className="text-gray-600 text-center mb-10">
           Encuentra el mejor servicio que se adapte a tus necesidades
         </p>
 
