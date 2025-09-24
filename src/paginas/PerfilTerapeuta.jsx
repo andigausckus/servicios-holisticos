@@ -79,7 +79,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
   </div>  
 
   {/* Perfil */}  
-  <div className="flex items-center gap-6 mb-4">  
+  <div className="flex items-center gap-6 mb-8">  
     <img  
       src={terapeuta.fotoPerfil}  
       alt={terapeuta.nombre}  
@@ -92,23 +92,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
     </div>  
   </div>  
 
-  {/* Mapa de ubicación */}  
-  {terapeuta?.lat && terapeuta?.lng && (  
-    <div className="mb-6 p-4 bg-white border border-gray-200 rounded-lg shadow-md">  
-      <h2 className="font-semibold mb-2">Ubicación</h2>  
-      <div className="w-full h-32 rounded-lg overflow-hidden shadow">  
-        <iframe  
-          title="Mapa ubicación"  
-          width="100%"  
-          height="100%"  
-          style={{ border: 0 }}  
-          loading="lazy"  
-          allowFullScreen  
-          src={`https://www.google.com/maps?q=${terapeuta.lat},${terapeuta.lng}&z=10&output=embed`}  
-        ></iframe>  
-      </div>  
-    </div>  
-  )}  
+  
 
   {/* Modal foto de perfil */}  
   {modalAbierto && (  
