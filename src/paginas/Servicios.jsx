@@ -8,15 +8,17 @@ export default function Servicios() {
   const [categoriaFiltro, setCategoriaFiltro] = useState("");
   const [ordenPrecio, setOrdenPrecio] = useState("");
 
-  // Obtenemos categorías únicas del JSON
+  // Categorías únicas
   const categorias = [...new Set(servicios.map((s) => s.categoria))];
 
-  // Filtramos servicios según categoría
-  let serviciosFiltrados = servicios.filter((servicio) => {
-    return categoriaFiltro === "" || servicio.categoria === categoriaFiltro;
-  });
+  // Filtrar por categoría y modalidad Online
+  let serviciosFiltrados = servicios.filter(
+    (servicio) =>
+      (categoriaFiltro === "" || servicio.categoria === categoriaFiltro) &&
+      servicio.modalidad === "Online"
+  );
 
-  // Ordenamos por precio
+  // Ordenar por precio
   if (ordenPrecio === "asc") {
     serviciosFiltrados.sort((a, b) => a.precio - b.precio);
   } else if (ordenPrecio === "desc") {
@@ -29,24 +31,24 @@ export default function Servicios() {
         <title>Servicios Holísticos | Encuentra tu terapia ideal</title>
         <meta
           name="description"
-          content="Descubrí todos los servicios de bienestar y terapias disponibles online o presenciales. Filtrá por categoría y reserva tu sesión."
+          content="Descubrí todos los servicios de bienestar y terapias disponibles online. Filtrá por categoría y reserva tu sesión."
         />
         <meta property="og:title" content="Servicios Holísticos" />
         <meta
           property="og:description"
-          content="Descubrí todos los servicios de bienestar y terapias disponibles online o presenciales. Filtrá por categoría y reserva tu sesión."
+          content="Descubrí todos los servicios de bienestar y terapias disponibles online. Filtrá por categoría y reserva tu sesión."
         />
         <meta property="og:image" content="URL_DE_UNA_IMAGEN_DEFAULT.jpg" />
         <meta property="og:url" content={window.location.href} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <div className="p-6 pt-12 mb-24 max-w-6xl mx-auto">
+      <div className="p-3 pt-12 mb-24 max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-2 text-teal-600">
           Servicios disponibles
         </h1>
         <p className="text-gray-600 mb-10">
-          Encuentra el mejor servicio que se adapte a tus necesidades 
+          Encuentra el mejor servicio que se adapte a tus necesidades
         </p>
 
         {/* Filtros */}
@@ -98,7 +100,7 @@ export default function Servicios() {
                 <p className="text-teal-600 font-normal mb-2">
                   {servicio.categoria}
                 </p>
-                <p className="text-gray-700 mb-4">Online</p>
+                <p className="text-gray-700 mb-4">{servicio.modalidad}</p>
                 <p className="text-gray-900 font-medium mt-auto text-xl mb-3">
                   ${servicio.precio.toLocaleString("es-AR")}
                 </p>
@@ -117,7 +119,7 @@ export default function Servicios() {
 
           {serviciosFiltrados.length === 0 && (
             <p className="col-span-full text-center text-gray-500">
-              No hay servicios disponibles con los filtros seleccionados.
+              No hay servicios Online disponibles con los filtros seleccionados.
             </p>
           )}
         </div>

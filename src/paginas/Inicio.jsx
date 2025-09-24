@@ -1,9 +1,47 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import servicios from "../datos/servicios.json";
+import terapeutas from "../datos/terapeutas.json";
 
 export default function Inicio() {
   const [openIndex, setOpenIndex] = useState(null);
+
+  // Filtro servicios nuevos y que aún tienen menos de 3 días de antigüedad
+  const ahora = new Date();
+  const nuevosServicios = servicios.filter((s) => {
+    if (!s.esNuevo) return false;
+    const creado = new Date(s.fechaCreacion || ahora); // fechaCreacion opcional en JSON
+    const diffDias = (ahora - creado) / (1000 * 60 * 60 * 24);
+    return diffDias <= 3;
+  });
+
+  const onlineServicios = nuevosServicios.filter(s => s.modalidad === "Online");
+  const presencialServicios = nuevosServicios.filter(s => s.modalidad === "Presencial");
+
+  const settings = {
+    dots: true,             // muestra los puntos de navegación
+    infinite: true,         // hace que el slider sea infinito
+    speed: 500,             // velocidad de transición en ms
+    slidesToShow: 1,        // 1 tarjeta por vista
+    slidesToScroll: 1,      // avanza 1 tarjeta cada vez
+    autoplay: true,         // activa el autoplay
+    autoplaySpeed: 5000,    // tiempo entre slides en ms (5s)
+    arrows: true,           // flechas para navegar manual
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 1 }
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 }
+      }
+    ]
+  };
 
   const faqs = [
     {
@@ -29,7 +67,7 @@ export default function Inicio() {
   ];
 
   return (
-    <div className="w-full font-montserrat">
+    <div className="w-full font-montserrat mb-24">
       {/* SEO dinámico */}
       <Helmet>
         <title>Servicios Holísticos | Encuentra terapeutas de confianza</title>
@@ -83,6 +121,83 @@ export default function Inicio() {
           </div>
         </div>
       </section>
+
+      {/* Slider Nuevos Servicios Online */}
+      {onlineServicios.length > 0 && (
+        <section className="py-16 bg-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+            Servicios online
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <Slider {...settings}>
+              {onlineServicios.map(s => (
+                <div key={s.id} className="p-4 flex flex-col items-center text-center">
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-green-500 text-white rounded-full mb-2">
+                    Nuevo
+                  </span>
+                  <img
+                    src={s.imagen}
+                    alt={s.titulo}
+                    className="w-full h-64 object-cover rounded-lg shadow mb-2"
+                  />
+                  <p className="text-sm text-teal-600 mb-1">{s.categoria}</p>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-1">{s.titulo}</h3>
+                  <p className="text-gray-600 mb-2">${s.precio}</p>
+                  <p className="text-sm text-gray-500 mb-4">Online</p>
+                  <Link
+                    to={`/servicio/${s.slug}`}
+                    className="bg-teal-600 text-white px-4 py-2 rounded-full shadow hover:bg-teal-700 transition"
+                  >
+                    Reservar ahora
+                  </Link>
+                </div>
+              ))}
+            </Slider>
+          </div>
+        </section>
+      )}
+
+      {/* Slider Nuevos Servicios Presenciales */}
+      {presencialServicios.length > 0 && (
+        <section className="py-16 bg-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
+            Servicios presenciales
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <Slider {...settings}>
+              {presencialServicios.map(s => {
+                const terapeuta = terapeutas.find(t => t.slug === s.terapeutaSlug);
+                return (
+                  <div key={s.id} className="p-4 flex flex-col items-center text-center">
+                    <span className="inline-block px-3 py-1 text-xs font-medium bg-green-500 text-white rounded-full mb-2">
+                      Nuevo
+                    </span>
+                    <img
+                      src={s.imagen}
+                      alt={s.titulo}
+                      className="w-full h-64 object-cover rounded-lg shadow mb-2"
+                    />
+                    <p className="text-sm text-teal-600 mb-1">{s.categoria}</p>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-1">{s.titulo}</h3>
+                    <p className="text-gray-600 mb-1">${s.precio}</p>
+                    {terapeuta && (
+                      <p className="text-sm text-gray-500 mb-4">
+                        Presencial en {terapeuta.ciudad}, {terapeuta.provincia}
+                      </p>
+                    )}
+                    <Link
+                      to={`/servicio/${s.slug}`}
+                      className="bg-teal-600 text-white px-4 py-2 rounded-full shadow hover:bg-teal-700 transition"
+                    >
+                      Reservar ahora
+                    </Link>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+        </section>
+      )}
 
       {/* Cómo funciona */}
       <section className="py-16 bg-white text-center px-6">
@@ -183,7 +298,7 @@ export default function Inicio() {
       </section>
 
       {/* CTA final */}
-      <section className="py-20 bg-gradient-to-r from-orange-100 via-amber-100 to-red-100  text-center">
+      <section className="py-20 bg-gradient-to-r from-orange-100 via-amber-100 to-red-100 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
           ¿Listo para comenzar tu camino de bienestar?
         </h2>

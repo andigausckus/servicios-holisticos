@@ -19,7 +19,7 @@ export default function Contacto() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-12">
+    <div className="max-w-3xl mb-24 mx-auto px-4 py-12">
       <h1 className="text-3xl text-teal-600 font-bold text-center mb-4">Contacto</h1>
       <p className="text-gray-600 text-center mb-8">
         Escríbeme y me pondré en contacto con vos lo antes posible, o abrí un

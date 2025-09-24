@@ -6,48 +6,49 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
   <url>
     <loc>https://serviciosholisticos.com.ar/contacto</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://serviciosholisticos.com.ar/servicios</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://serviciosholisticos.com.ar/sobre-mi</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://serviciosholisticos.com.ar/mapa</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Perfiles de terapeutas -->
   <url>
     <loc>https://serviciosholisticos.com.ar/terapeuta/sofia-martinez</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://serviciosholisticos.com.ar/terapeuta/juan-perez</loc>
+    <loc>https://serviciosholisticos.com.ar/terapeuta/laura-veronica-zilvestein</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://serviciosholisticos.com.ar/terapeuta/maria-lopez</loc>
+    <loc>https://serviciosholisticos.com.ar/terapeuta/ami-barreiro-coach</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <url>
+    <loc>https://serviciosholisticos.com.ar/servicio/sesion-de-yoga-energetico</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://serviciosholisticos.com.ar/servicio/sesion-de-reiki-usui</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

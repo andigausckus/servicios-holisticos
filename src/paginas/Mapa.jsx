@@ -44,7 +44,7 @@ export default function Mapa() {
   });
 
   return (
-    <div className="p-6 pt-12">
+    <div className="p-3 mb-24 pt-12">
       <h1 className="text-3xl font-bold text-teal-600 mb-2 text-center">
         Servicios Presenciales
       </h1>
@@ -98,11 +98,11 @@ export default function Mapa() {
       </div>
 
       {/* Mapa */}
-      <MapContainer
-        center={[-34.6037, -58.3816]} // Buenos Aires default
-        zoom={5}
-        style={{ height: "500px", width: "100%" }}
-      >
+        <MapContainer
+          center={[-38.4161, -63.6167]} // Centro aproximado de Argentina
+          zoom={4} // más cerca que 4, se enfoca mejor en el país
+          style={{ height: "500px", width: "100%" }}
+        >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'

@@ -12,7 +12,7 @@ export default function SobreMi() {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
 
   return (
-    <div className="p-8 text-center">
+    <div className="p-8 mb-24 text-center">
       <h1 className="text-3xl font-bold text-teal-600 mb-4">Sobre mí</h1>
       <p className="text-gray-700 max-w-2xl mx-auto mb-6">
         Bienvenido/a 👋 Soy Andi Gausckus, el creador de este espacio de servicios holisticos.

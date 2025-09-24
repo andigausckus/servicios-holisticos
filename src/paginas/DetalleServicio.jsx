@@ -74,7 +74,7 @@ ${
       </Helmet>
 
       {/* Contenido del servicio */}
-      <div className="max-w-3xl mx-auto p-6">
+      <div className="max-w-3xl mb-24 mx-auto p-3">
         {/* Imagen */}
         <img
           src={servicio.imagen}
@@ -84,7 +84,7 @@ ${
 
         {/* Título y categoría */}
         <h1 className="text-2xl font-bold mb-2">{servicio.titulo}</h1>
-        <p className="text-gray-600 mb-6">{servicio.categoria}</p>
+        <p className="text-teal-600 mb-6">{servicio.categoria}</p>
 
         {/* Terapeuta */}
         <div className="mb-4 p-4 bg-white border border-gray-200 rounded-lg shadow-md">
@@ -119,7 +119,7 @@ ${
         </div>
 
         {/* Descripción */}
-        <div className="mb-4 p-4 bg-white border border-gray-200 rounded-lg shadow-md">
+        <div className="mb-6 p-4 bg-white border border-gray-200 rounded-lg shadow-md">
           <h2 className="font-medium mb-2">Descripción del servicio</h2>
           <p className="text-sm text-gray-700">
             {expandirDescripcion
@@ -141,28 +141,7 @@ ${
           )}
         </div>
 
-        {/* Ubicación con mapa */}
-        {servicio.modalidad === "Presencial" && terapeuta?.lat && terapeuta?.lng && (
-          <div className="mb-4 p-4 bg-white border border-gray-200 rounded-lg shadow-md">
-            <h2 className="font-semibold mb-1">Ubicación</h2>
-            <p className="text-sm text-gray-700">
-              {terapeuta.ciudad}, {terapeuta.provincia}
-            </p>
-
-            <div className="mt-3 w-full h-48 rounded-lg overflow-hidden shadow">
-              <iframe
-                title="Mapa ubicación"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                src={`https://www.google.com/maps?q=${terapeuta.lat},${terapeuta.lng}&output=embed`}
-              ></iframe>
-            </div>
-          </div>
-        )}
-
+        
         {/* Campo nombre */}
         <div className="mb-6">
           <label
@@ -207,8 +186,8 @@ ${
         </div>
 
         {/* Texto de pago */}
-        <p className="text-md italic text-gray-500 mt-8">
-          Para tu seguridad, Servicios Holístico gestionará el pago de esta sesión.
+        <p className="text-sm italic text-gray-500 mt-8">
+          Servicios Holisticos gestionará el pago de esta sesión.
         </p>
 
         {/* Precio y botón WhatsApp */}
