@@ -19,9 +19,9 @@ Terapeuta no encontrado
 );
 }
 
-const serviciosTerapeuta = servicios.filter(
-(s) => s.terapeutaSlug === terapeuta.slug
-);
+  const serviciosTerapeuta = servicios.filter(
+    (s) => s.terapeutaId === terapeuta.id
+  );
 
 const [modalAbierto, setModalAbierto] = useState(false);
 const [expandSobreMi, setExpandSobreMi] = useState(false);
@@ -177,7 +177,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
 // Componente ServicioCard fuera del JSX
 function ServicioCard({ servicio }) {
 const [expanded, setExpanded] = useState(false);
-const terapeutaDelServicio = terapeutas.find(t => t.slug === servicio.terapeutaSlug);
+  const terapeutaDelServicio = terapeutas.find(t => t.id === servicio.terapeutaId);
 
 return (
 <div className="bg-white rounded-lg shadow-md p-4 flex flex-col">

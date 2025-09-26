@@ -143,7 +143,7 @@ export default function Inicio() {
                   />
                   <p className="text-sm text-teal-600 mb-1">{s.categoria}</p>
                   <h3 className="text-xl font-semibold text-gray-800 mb-1">{s.titulo}</h3>
-                  <p className="text-gray-600 mb-2">${s.precio}</p>
+                  <p className="text-gray-600 mb-2">${s.precio.toLocaleString("es-AR")}</p>
                   <p className="text-sm text-gray-500 mb-4">Online</p>
                   <Link
                     to={`/servicio/${slugify(s.titulo, { lower: true, strict: true })}`}
@@ -167,7 +167,7 @@ export default function Inicio() {
           <div className="max-w-6xl mx-auto">
             <Slider {...settings}>
               {presencialServicios.map(s => {
-                const terapeuta = terapeutas.find(t => t.slug === s.terapeutaSlug);
+          const terapeuta = terapeutas.find(t => t.id === s.terapeutaId);
                 return (
                   <div key={s.id} className="p-4 flex flex-col items-center text-center">
                     <span className="inline-block px-3 py-1 text-xs font-medium bg-green-500 text-white rounded-full mb-2">
@@ -180,7 +180,7 @@ export default function Inicio() {
                     />
                     <p className="text-sm text-teal-600 mb-1">{s.categoria}</p>
                     <h3 className="text-xl font-semibold text-gray-800 mb-1">{s.titulo}</h3>
-                    <p className="text-gray-600 mb-1">${s.precio}</p>
+                    <p className="text-gray-600 mb-2">${s.precio.toLocaleString("es-AR")}</p>
                     {terapeuta && (
                       <p className="text-sm text-gray-500 mb-4">
                         Presencial en {terapeuta.ciudad}, {terapeuta.provincia}
