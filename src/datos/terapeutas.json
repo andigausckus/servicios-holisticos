@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "nombre": "Sofia Martinez",
-    "slug": "sofia-martinez",
-    "provincia": "Santa Fe",
-    "ciudad": "Rosario",
-    "lat": -32.9587,
-    "lng": -60.6939,
-    "fotoPerfil": "https://i.postimg.cc/JzBBwGby/man-613601-640.jpg",
-    "fotoPortada": "https://i.postimg.cc/JhF6rT0r/yoga-4489430-1920.jpg",
-    "sobreMi": "Soy Sofía, terapeuta especializada en Reiki y terapias energéticas. Mi misión es ayudarte a equilibrar tu energía y encontrar paz interior.",
-    "especialidades": ["Reiki", "Terapias energéticas"],
-    "disponibilidad": "Lunes a Viernes de 10 a 15hs"
+    "nombre": "Tarot Rumbo Mistico",
+    "slug": "tarot-rumbo-mistico",
+    "provincia": "Chubut",
+    "ciudad": "Esquel",
+    "lat": -42.91147,
+    "lng": -71.31947,
+    "fotoPerfil": "https://i.postimg.cc/T2JDKVhD/Stories-de-Instagram-Primavera-Minimalista-Aesthetic-Pastel-20240501-172111-0000-2-Yesica.png",
+    "fotoPortada": "https://i.postimg.cc/hPwPvv80/20230918-145923-0000-Yesica.png",
+    "sobreMi": "Soy Yesica y me dedico a la Numerología, realizando lecturas para que cada persona pueda tener claridad sobre sus incertidumbres y tomar decisiones que generen cambios positivos en su vida.\nPodemos revisar cualquier área o aspecto de tu vida.\n\nTe ofrezco una escucha activa y empática, con total confidencialidad, para acompañarte en tu camino y guiarte hacia nuevas perspectivas y oportunidades.",
+    "especialidades": ["Tarot", "Numerologia"],
+    "disponibilidad": "Lunes a Sábado 12 a 20 hs"
   },
 
   {

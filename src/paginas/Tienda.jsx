@@ -30,11 +30,11 @@ export default function Tienda() {
 
   return (
     <div className="pt-20 pb-24 px-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-teal-600 mb-4">
-        Tienda Holística (Próximamente)
+      <h1 className="text-3xl text-center font-bold text-teal-600 mb-4">
+        Tienda Holistica
       </h1>
-      <p className="text-gray-600 mb-6">
-        Productos naturales, sahumerios y más. (Página en desarrollo)
+      <p className="text-center text-gray-600 mb-6">
+        Encuentra cosmética natural, sahumerios, velas y todo lo necesario para tu práctica holistica diaria y bienestar
       </p>
 
       {/* Filtros */}
@@ -42,7 +42,7 @@ export default function Tienda() {
         <select
           value={categoriaFiltro}
           onChange={(e) => setCategoriaFiltro(e.target.value)}
-          className="border rounded-sm px-3 py-2 w-full md:flex-1"
+          className="border rounded-sm px-3 py-2 w-full md:flex-1 focus:outline-none focus:ring-0"
         >
           <option value="">Productos</option>
           {categorias.map((c, i) => (
@@ -55,7 +55,7 @@ export default function Tienda() {
         <select
           value={ordenPrecio}
           onChange={(e) => setOrdenPrecio(e.target.value)}
-          className="border rounded-sm px-3 py-2 w-full md:flex-1"
+          className="border rounded-sm px-3 py-2 w-full md:flex-1 focus:outline-none focus:ring-0"
         >
           <option value="">Ordenar por precio</option>
           <option value="asc">Menor a mayor</option>
@@ -71,14 +71,14 @@ export default function Tienda() {
             className="bg-white border rounded-sm shadow-sm overflow-hidden"
           >
             {/* imagen con badge */}
-            <div className="relative w-full h-44 overflow-hidden">
+            <div className="relative w-full h-52 overflow-hidden">
               <img
                 src={p.imagen}
                 alt={p.titulo}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
               {p.esNuevo && (
-                <span className="absolute top-1 right-1 bg-green-500 text-white text-xs px-2 py-0.5 rounded">
+                <span className="absolute top-1 right-1 bg-green-500 text-white text-xs px-2 py-0.5">
                   Nuevo
                 </span>
               )}
@@ -94,7 +94,7 @@ export default function Tienda() {
               <div className="flex items-center justify-between gap-2">
                 <Link
                   to={`/tienda/${slugify(p.titulo)}`}
-                  className="text-sm px-3 py-2 rounded-sm bg-teal-600 text-white hover:bg-teal-700"
+                  className="text-sm px-3 py-2 bg-black text-white"
                 >
                   Ver más
                 </Link>
