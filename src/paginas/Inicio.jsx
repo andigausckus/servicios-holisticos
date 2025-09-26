@@ -128,7 +128,7 @@ export default function Inicio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
             Servicios online
           </h2>
-          <div className="max-w-6xl mx-auto overflow-hidden">
+          <div className="max-w-6xl mx-auto">
             <Slider {...settings}>
               {onlineServicios.map(s => (
                 <div key={s.id} className="p-4 flex flex-col items-center text-center">
@@ -146,7 +146,7 @@ export default function Inicio() {
                   <p className="text-sm text-gray-500 mb-4">Online</p>
                   <Link
                     to={`/servicio/${s.slug}`}
-                    className="bg-teal-600 text-white px-4 py-2 rounded-full shadow hover:bg-teal-700 transition"
+                    className="bg-yellow-600 text-white px-4 py-2 rounded-full shadow hover:bg-yellow-700 transition"
                   >
                     Reservar ahora
                   </Link>
@@ -163,7 +163,7 @@ export default function Inicio() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-10">
             Servicios presenciales
           </h2>
-          <div className="max-w-6xl mx-auto overflow-hidden">
+          <div className="max-w-6xl mx-auto">
             <Slider {...settings}>
               {presencialServicios.map(s => {
                 const terapeuta = terapeutas.find(t => t.slug === s.terapeutaSlug);
@@ -187,7 +187,7 @@ export default function Inicio() {
                     )}
                     <Link
                       to={`/servicio/${s.slug}`}
-                      className="bg-teal-600 text-white px-4 py-2 rounded-full shadow hover:bg-teal-700 transition"
+                      className="bg-yellow-600 text-white px-4 py-2 rounded-full shadow hover:bg-yelloe-700 transition"
                     >
                       Reservar ahora
                     </Link>

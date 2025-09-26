@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "titulo": "Sahumerio Mixto (Pack x3)",
+    "categoria": "Sahumerios",
+    "precio": 3000,
+    "imagen": "https://i.postimg.cc/VkJ4BVrg/IMG-20250925-WA0025.jpg",
+    "esNuevo": true,
+    "descripcion": "Pack de 3 sahumerios mixtos para armonizar y purificar tu hogar. Ideal para rituales y meditación."
+  },
+  {
+    "id": 2,
+    "titulo": "Incienso Natural - Caja",
+    "categoria": "Sahumerios",
+    "precio": 9500,
+    "imagen": "https://i.postimg.cc/9Q6w1rXr/incienso.jpg",
+    "esNuevo": true,
+    "descripcion": "Caja de incienso natural con aromas relajantes. Perfecto para meditación y crear un ambiente tranquilo."
+  },
+  {
+    "id": 3,
+    "titulo": "Cosmética Natural - Crema Facial",
+    "categoria": "Cosmética natural",
+    "precio": 4200,
+    "imagen": "https://i.postimg.cc/0yF8j9H3/crema.jpg",
+    "esNuevo": false,
+    "descripcion": "Crema facial elaborada con ingredientes 100% naturales. Hidrata y nutre tu piel de manera saludable."
+  },
+  {
+    "id": 4,
+    "titulo": "Spray Ambiental - Lavanda",
+    "categoria": "Spray",
+    "precio": 850,
+    "imagen": "https://i.postimg.cc/yYz9s5j6/spray.jpg",
+    "esNuevo": false,
+    "descripcion": "Spray ambiental con esencia de lavanda para relajarte y purificar el ambiente de tu hogar u oficina."
+  }
+]

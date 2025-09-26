@@ -65,7 +65,6 @@ export default function Navbar() {
             Sobre mí
           </NavLink>
 
-          {/* 👉 Nuevo link Contacto */}
           <NavLink
             to="/contacto"
             className={({ isActive }) =>
@@ -76,6 +75,16 @@ export default function Navbar() {
           >
             Contacto
           </NavLink>
+
+          {/* 👉 Tienda Holística con badge Próximamente */}
+          <div className="flex items-center space-x-1">
+            <span className="text-gray-700 cursor-not-allowed">
+              Tienda Holística
+            </span>
+            <span className="text-xs bg-teal-600 text-white px-2 py-0.5 rounded">
+              Próximamente
+            </span>
+          </div>
         </div>
 
         {/* Botón hamburguesa */}
@@ -142,7 +151,6 @@ export default function Navbar() {
             Sobre mí
           </NavLink>
 
-          {/* 👉 Nuevo link Contacto en mobile */}
           <NavLink
             to="/contacto"
             className={({ isActive }) =>
@@ -154,6 +162,16 @@ export default function Navbar() {
           >
             Contacto
           </NavLink>
+
+          {/* 👉 Tienda Holística con badge Próximamente en mobile */}
+          <div className="flex justify-center items-center space-x-1 border border-gray-200 rounded-lg px-3 py-2">
+            <span className="text-gray-700 cursor-not-allowed">
+              Tienda Holistica
+            </span>
+            <span className="text-xs bg-green-600 text-white px-2 py-0.5 rounded">
+              Próximamente
+            </span>
+          </div>
         </div>
       )}
     </nav>
