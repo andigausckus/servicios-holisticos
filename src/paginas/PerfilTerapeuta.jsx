@@ -215,7 +215,7 @@ className="w-full h-32 object-cover rounded-lg mb-3"
   <div className="mt-4 flex justify-center">  
     <Link  
       to={`/servicio/${slugify(servicio.titulo)}`}  
-      className="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors focus:outline-none focus:ring-0"  
+      className="bg-teal-600 text-white px-2 py-1 rounded-lg hover:bg-teal-700 transition-colors focus:outline-none focus:ring-0"  
     >  
       Ver servicio  
     </Link>  
