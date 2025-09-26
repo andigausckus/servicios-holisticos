@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import servicios from "../datos/servicios.json";
 import terapeutas from "../datos/terapeutas.json";
+import slugify from "slugify";
 
 export default function Inicio() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -145,7 +146,7 @@ export default function Inicio() {
                   <p className="text-gray-600 mb-2">${s.precio}</p>
                   <p className="text-sm text-gray-500 mb-4">Online</p>
                   <Link
-                    to={`/servicio/${s.slug}`}
+                    to={`/servicio/${slugify(s.titulo, { lower: true, strict: true })}`}
                     className="bg-yellow-600 text-white px-4 py-2 rounded-full shadow hover:bg-yellow-700 transition"
                   >
                     Reservar ahora
@@ -186,8 +187,8 @@ export default function Inicio() {
                       </p>
                     )}
                     <Link
-                      to={`/servicio/${s.slug}`}
-                      className="bg-yellow-600 text-white px-4 py-2 rounded-full shadow hover:bg-yelloe-700 transition"
+                      to={`/servicio/${slugify(s.titulo, { lower: true, strict: true })}`}
+                      className="bg-yellow-600 text-white px-4 py-2 rounded-full shadow hover:bg-yellow-700 transition"
                     >
                       Reservar ahora
                     </Link>

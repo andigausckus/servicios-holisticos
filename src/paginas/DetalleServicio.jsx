@@ -8,7 +8,9 @@ import { Helmet } from "react-helmet-async";
 export default function DetalleServicio() {
   const { slug } = useParams();
 
-  const servicio = servicios.find((s) => slugify(s.titulo) === slug);
+  const servicio = servicios.find(
+  (s) => slugify(s.titulo, { lower: true, strict: true }) === slug
+);
   const [expandirDescripcion, setExpandirDescripcion] = useState(false);
   const [nombreUsuario, setNombreUsuario] = useState("");
   const [whatsappUsuario, setWhatsappUsuario] = useState("");
