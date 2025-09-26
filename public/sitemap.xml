@@ -87,17 +87,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://serviciosholisticos.com.ar/servicio/lectura-de-las-relaciones-(amplia)</loc>
+    <loc>https://serviciosholisticos.com.ar/servicio/lectura-amplia-de-las-relaciones</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://serviciosholisticos.com.ar/servicio/tirada-de-las-relaciones-(breve)</loc>
+    <loc>https://serviciosholisticos.com.ar/servicio/lectura-breve-de-las-relaciones</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://serviciosholisticos.com.ar/servicio/tarot-si-o-no</loc>
+    <loc>https://serviciosholisticos.com.ar/servicio/tarot-de-respuesta-rápida-sí-o-no</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
