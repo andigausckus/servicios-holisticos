@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "titulo": "Lectura Amplia de las Relaciones",
+    "titulo": "Lectura amplia de las relaciones",
     "terapeutaId": 1,
     "categoria": "Tarot",
     "modalidad": "Online",
@@ -49,7 +49,7 @@
   },
   {
     "id": 5,
-    "titulo": "Lectura Breve de las Relaciones",
+    "titulo": "Lectura breve de las relaciones",
     "terapeutaId": 1,
     "categoria": "Tarot",
     "modalidad": "Online",
@@ -61,7 +61,7 @@
   },
   {
     "id": 6,
-    "titulo": "Tarot de Respuesta Rápida Sí o No",
+    "titulo": "Tarot de respuesta rápida Sí o No",
     "terapeutaId": 1,
     "categoria": "Tarot",
     "modalidad": "Online",

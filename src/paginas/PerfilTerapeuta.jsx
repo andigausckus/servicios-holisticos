@@ -30,7 +30,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
     <div className="p-3 mb-24 max-w-full mx-auto">
       {/* SEO dinámico */}
       <Helmet>
-        <title>{`${terapeuta.nombre} | Terapeuta Holístico en ${terapeuta.ciudad}`}</title>
+        <title>{`${terapeuta.nombre} | Terapeuta Holistico en ${terapeuta.ciudad}`}</title>
         <meta
           name="description"
           content={`${terapeuta.nombre} ofrece ${terapeuta.especialidades?.join(
@@ -39,7 +39,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
         />
         <meta
           property="og:title"
-          content={`${terapeuta.nombre} | Servicios Holísticos`}
+          content={`${terapeuta.nombre} | Servicios Holisticos`}
         />
         <meta
           property="og:description"
@@ -57,7 +57,7 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
       </Helmet>
 
 {/* Foto o Video de portada */}  
-  <div className="w-full h-60 bg-gray-200 rounded-lg overflow-hidden mb-6">  
+  <div className="w-full h-76 bg-gray-200 rounded-lg overflow-hidden mb-6">  
     {terapeuta.videoPortada ? (  
       <iframe  
         width="100%"  
@@ -156,9 +156,9 @@ const [expandSobreMi, setExpandSobreMi] = useState(false);
 
   {/* Mis servicios */}  
   <div>  
-    <h2 className="text-gl font-medium mb-4">Mis servicios</h2>  
-    {serviciosTerapeuta.length > 0 ? (  
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">  
+    <h2 className="text-gl font-medium mb-4">Mis servicios</h2>
+    {serviciosTerapeuta.length > 0 ? (
+      <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
         {serviciosTerapeuta.map((s) => (  
           <ServicioCard key={s.id} servicio={s} />  
         ))}  
@@ -180,29 +180,19 @@ const [expanded, setExpanded] = useState(false);
   const terapeutaDelServicio = terapeutas.find(t => t.id === servicio.terapeutaId);
 
 return (
-<div className="bg-white rounded-lg shadow-md p-4 flex flex-col">
+<div className="bg-white rounded-lg shadow-md p-2 flex flex-col">
 {servicio.imagen && (
 <img  
 src={servicio.imagen}  
 alt={servicio.titulo}  
-className="w-full h-32 object-cover rounded-lg mb-3"  
+className="w-full h-40 object-cover rounded-lg mb-4"  
 />
 )}
-<h3 className="font-medium text-lg">{servicio.titulo}</h3>
+<h3 className="font-medium mb-2 text-md">{servicio.titulo}</h3>
 
-<p className={`text-sm text-gray-600 ${expanded ? "" : "line-clamp-2"}`}>  
-    {servicio.descripcion}  
-  </p>  
-  <div className="flex justify-end">  
-    <button  
-      className="text-teal-600 text-sm mt-1 hover:underline focus:outline-none"  
-      onClick={() => setExpanded(!expanded)}  
-    >  
-      {expanded ? "Ver menos" : "Ver más"}  
-    </button>  
-  </div>  
+  
 
-  <p className="text-teal-600 font-medium">  
+  <p className="text-teal-600 mb-4 font-medium">  
     {servicio.modalidad === "Online"  
       ? "Online"  
       : `Presencial en ${terapeutaDelServicio?.ciudad}, ${terapeutaDelServicio?.provincia}`}  
@@ -215,9 +205,9 @@ className="w-full h-32 object-cover rounded-lg mb-3"
   <div className="mt-4 flex justify-center">  
     <Link  
       to={`/servicio/${slugify(servicio.titulo)}`}  
-      className="bg-teal-600 text-white px-2 py-1 rounded-lg hover:bg-teal-700 transition-colors focus:outline-none focus:ring-0"  
+      className="bg-yellow-600 text-white px-2 py-1 rounded-lg hover:bg-yellow-700 transition-colors focus:outline-none focus:ring-0"  
     >  
-      Ver servicio  
+      Reservar ahora
     </Link>  
   </div>  
 </div>
