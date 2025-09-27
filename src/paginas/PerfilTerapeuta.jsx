@@ -20,8 +20,8 @@ Terapeuta no encontrado
 }
 
   const serviciosTerapeuta = servicios.filter(
-    (s) => s.terapeutaId === terapeuta.id
-  );
+  (s) => Number(s.terapeutaId) === Number(terapeuta.id)
+);
 
 const [modalAbierto, setModalAbierto] = useState(false);
 const [expandSobreMi, setExpandSobreMi] = useState(false);

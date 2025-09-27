@@ -19,7 +19,13 @@ export default function DetalleServicio() {
     return <p className="text-center mt-10">Servicio no encontrado</p>;
   }
 
-  const terapeuta = terapeutas.find((t) => t.id === servicio.terapeutaId);
+  const terapeuta = terapeutas.find(
+  (t) => Number(t.id) === Number(servicio.terapeutaId)
+);
+
+  // DEBUG: revisar si encuentra el servicio y el terapeuta
+console.log("Servicio:", servicio);
+console.log("Terapeuta del servicio:", terapeuta);
 
   // Armamos el mensaje dinámico para WhatsApp
   const mensaje = `📩 Nueva reserva desde Servicios Holísticos

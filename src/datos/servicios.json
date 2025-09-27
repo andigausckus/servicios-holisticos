@@ -73,14 +73,14 @@
   },
   {
     "id": 7,
-    "titulo": "",
-    "terapeutaId": "",
-    "categoria": "",
-    "modalidad": "",
-    "precio": "",
-    "imagen": "",
-    "duracion": "",
-    "descripcion": "",
+    "titulo": "Oráculo para tu alma",
+    "terapeutaId": "1",
+    "categoria": "Tarot",
+    "modalidad": "Online",
+    "precio": "3333",
+    "imagen": "https://i.postimg.cc/rm7dXw8z/Post-Instagram-buenas-noticias-rosa-degradado-20250926-160738-0000-Yesica.png",
+    "duracion": "5 minutos",
+    "descripcion": "Este oráculo te ofrece un mensaje directo que tu alma necesita recibir en tu momento presente. Está opción es ideal cuando no sabes que lectura realizar. El oráculo es la mejor opción.",
     "esNuevo": true
   },
   {
